@@ -5,10 +5,10 @@ import json
 
 # database_name = "casting-agency"
 # database_path = "postgres://postgres:stemed@{}/{}".format('localhost:5432', database_name)
-DATABASE_URL = "postgres://flgwzfaftykbvd:73b2bc943dfdfcc89c034d1e3aabac04d9877b38dbf89b6479fa35e1844f340d@ec2-52-73-247-67.compute-1.amazonaws.com:5432/dak2rk0fbi1b6l"
+database_path = "postgres://flgwzfaftykbvd:73b2bc943dfdfcc89c034d1e3aabac04d9877b38dbf89b6479fa35e1844f340d@ec2-52-73-247-67.compute-1.amazonaws.com:5432/dak2rk0fbi1b6l"
 
 db = SQLAlchemy()
-def setup_db(app, database_path=DATABASE_URL):
+def setup_db(app, database_path=database_path):
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
